@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container-produk {
+  padding-top: 30px;
+}
+
+.banner {
+  max-width: 100%;
+  height: 150px;
+}
+
+.gambar-produk:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.checked {
+  color: orange;
+}
+
+.judul-produk {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(52, 58, 59, 0.7);
+  font-family: "Rubik", sans-serif;
+}
+
+.img-piring {
+  width: 250px;
+}
+
+/* testimoni */
+
+/* slider */
+
+.slide-container {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  border: 3px solid #ede6d6;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.slide-container .slides {
+  width: 100%;
+  height: calc(100% - 40px);
+  position: relative;
+  overflow: hidden;
+}
+.slide-container .slides img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.slide-container .slides img:not(.active) {
+  top: 0;
+  left: -100%;
+}
+span.next,
+span.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  color: #eee;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.5s;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+span.next {
+  right: 20px;
+}
+span.prev {
+  left: 20px;
+}
+span.next:hover,
+span.prev:hover {
+  background-color: #ede6d6;
+  opacity: 0.8;
+  color: #222;
+}
+.dotsContainer {
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dotsContainer .dot {
+  width: 15px;
+  height: 15px;
+  margin: 0px 2px;
+  border: 3px solid #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+.dotsContainer .active {
+  background-color: #555;
+}
+
+#icon-paw1 {
+  position: absolute;
+  top: 12em;
+  left: 1.6em;
+  font-size: 2em;
+  opacity: 0.1;
+  rotate: 23deg;
+}
+#icon-paw2 {
+  position: absolute;
+  top: 18em;
+  left: 80vw;
+  font-size: 2em;
+  opacity: 0.2;
+  rotate: -23deg;
+}
+#icon-paw3 {
+  position: absolute;
+  top: 24em;
+  left: 1.6em;
+  font-size: 2em;
+  opacity: 0.3;
+  rotate: 17deg;
+}
+#icon-paw4 {
+  position: absolute;
+  top: 30em;
+  left: 83vw;
+  font-size: 2em;
+  opacity: 0.4;
+  rotate: -12deg;
+}
+#icon-paw5 {
+  position: absolute;
+  top: 36em;
+  left: 1em;
+  font-size: 2em;
+  opacity: 0.5;
+  rotate: 0deg;
+}
+#icon-paw6 {
+  position: absolute;
+  top: 42em;
+  left: 77vw;
+  font-size: 2em;
+  opacity: 0.6;
+  rotate: 12deg;
+  display: none;
+}
+#icon-paw7 {
+  position: absolute;
+  top: 48em;
+  left: 0.8em;
+  font-size: 2em;
+  opacity: 0.7;
+  rotate: -15deg;
+  display: none;
+}
+
+@media screen and (min-width: 375px) {
+  #icon-paw6 {
+    display: block;
+  }
+  #icon-paw7 {
+    display: block;
+  }
+}
+
+@keyframes next1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes next2 {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes prev1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes prev2 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+.petjourney {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    min-width: 100%;
+    height: 300px !important;
+  }
+
+  .slide-container {
+    width: 100vw;
+    height: 60vh;
+    display: block;
+  }
+
+  .petjourney {
+    display: block;
+  }
+
+  .container-produk {
+    padding-top: 80px !important;
+  }
+  .img-piring {
+    width: 250px !important;
+  }
+  .judul-produk {
+    font-size: 45px !important;
+  }
+  /* .slide-container {
+    width: 800px !important;
+    height: 350px !important;
+  } */
+  #icon-paw1,
+  #icon-paw2,
+  #icon-paw3,
+  #icon-paw4,
+  #icon-paw5,
+  #icon-paw6,
+  #icon-paw7 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .img-piring {
+    width: 300px !important;
+  }
+
+  .banner {
+    min-width: 100%;
+    height: 400px !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .banner {
+    min-width: 100%;
+    height: 500px !important;
+  }
+
+  .img-piring {
+    width: 500px !important;
+  }
+}
