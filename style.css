@@ -8,6 +8,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.produk-page {
+  height: auto;
+  padding-bottom: 2em;
+}
+
 .container-produk {
   padding-top: 30px;
 }
